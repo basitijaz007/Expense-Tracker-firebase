@@ -7,7 +7,7 @@ import { useAddTransaction } from "../../hooks/useAddTransaction";
 import { useGetTransactions } from "../../hooks/useGetTransactions";
 import "./styles.css";
 
-const ExpenseTracker = () => {
+export const ExpenseTracker = () => {
   const { addTransaction } = useAddTransaction();
   const { transactions, transactionTotals } = useGetTransactions();
   const { name, profilePhoto } = useGetUserInfo();
@@ -121,7 +121,8 @@ const ExpenseTracker = () => {
                       color: transactionType === "expense" ? "red" : "green",
                     }}
                   >
-                    {transactionType}
+                    {" "}
+                    {transactionType}{" "}
                   </label>
                 </p>
               </li>
@@ -132,5 +133,3 @@ const ExpenseTracker = () => {
     </>
   );
 };
-
-export default ExpenseTracker;

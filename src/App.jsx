@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Auth } from "./pages/auth/Auth";
-import ExpenseTracker from "./pages/expense-tracker";
+import { ExpenseTracker } from "./pages/expense-tracker";
 const App = () => {
   return (
     <Router>
